@@ -4,33 +4,39 @@ const now = DateTime.now();
 let currentDay = $('#currentDay');
 currentDay.text(now.toLocaleString(DateTime.DATETIME_MED));
 
-function createTimeBlock(time) {
-    let hour = '';
+function createTimeBlock(hour) {
     const timeBlock = $('<p>')
         .addClass('hour')
         .addClass('time');
-
-    if (time.toFormat('HH') >= 12) {
-        hour += time.toFormat('h') + ' PM';
-    } else {
-        hour += time.toFormat('h') + ' AM';
-    }
-
     timeBlock.text(hour);
     return timeBlock;
 }
 
-function createEventDiv() {
-    const eventDiv = $('<div>').addClass('event');
+function createEventDiv(time) {  
+    const eventDiv = $('<div>').addClass('event')//.attr('id', id);
     eventDiv.append($('<textarea>'));
+
+    if (time.hour < now.hour) {
+        eventDiv.addClass('past');
+    } else if (time.hour > now.hour) {
+        eventDiv.addClass('future');
+    } else {
+        eventDiv.addClass('present');
+    }
     return eventDiv;
 }
 
 function createSaveButton() {
     const button = $('<button>')
         .addClass('saveBtn')
+        .click(handleOnClick)
         .append('<i class="fas fa-save"></i>');
     return button;
+}
+
+function handleOnClick(event) {
+    console.log(event);
+    console.log(event.currentTarget);
 }
 
 function init() {
@@ -39,26 +45,27 @@ function init() {
     const dt = DateTime.fromObject({hour: startHour});
 
     const schedule = $('#schedule');
-    const list = $('<ol>').addClass('time-block');
+    const list = $('<ol>');
 
-    for (let i = startHour; i < endHour; i++) {
+    for (let i = startHour; i <= endHour; i++) {
         const emptyListElement = $('<li>');
-        let rowDiv = $('<div>').addClass('row');
+
+        const time = dt.set({hour: i});
+        let hour = '';
+        if (time.toFormat('HH') >= 12) {
+            hour += time.toFormat('h') + ' PM';
+        } else {
+            hour += time.toFormat('h') + ' AM';
+        }
+
+        let rowDiv = $('<div>').addClass('row').attr('id', hour);
         rowDiv.append(
-            createTimeBlock(dt.set({hour: i})),
-            createEventDiv(),
+            createTimeBlock(hour),
+            createEventDiv(time),
             createSaveButton()
         );
 
-        console.log(dt.hour);
 
-        if (i < now.hour) {
-            rowDiv.addClass('past');
-        } else if (i > now.hour) {
-            rowDiv.addClass('future');
-        } else {
-            rowDiv.addClass('present');
-        }
 
         emptyListElement.append(rowDiv);
         list.append(emptyListElement);

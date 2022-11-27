@@ -11,6 +11,9 @@ body {
 	font-size: 16px;
 	line-height: 1;
 	width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
 }
 
 textarea {
@@ -41,7 +44,11 @@ ol {
 }
 
 .container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-self: center;
 	width: 100%;
+	margin: 25px 20px;
 }
 
 .time-block {
@@ -52,8 +59,7 @@ ol {
 
 .row {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
+	flex-flow: row nowrap;
 	justify-content: center;
 	white-space: pre-wrap;
 	height: 80px;
@@ -93,6 +99,7 @@ ol {
 .event {
 	height: 100%;
 	padding: 0px;
+	flex: 3;
 }
 
 .saveBtn {
