@@ -20,9 +20,13 @@ No installation instructions. Just visit [Online Simple Scheduler](https://pbp66
 
 ## Usage
 
-To use the scheduler, enter the details of an event, appointment, task, etc at the time it occurs. Click the save button in the right hand column to save the event. 
+When first visiting the site, the website will load this page:
 
-Upon saving, a notification will appear above the schedule notifying you that the event was successfully saved to local storage along with stating the time and event details. 
+![Starting Webpage](./assets/00-readme/scheduler-demo-1.png)
+
+To use the scheduler, enter the details of an event, appointment, task, etc at the time it occurs. Click the save button in the right hand column to save the event. Upon saving, a notification will appear above the schedule notifying you that the event was successfully saved to local storage along with stating the time and event details. 
+
+![Saving an Event](./assets/00-readme/scheduler-demo-2.png)
 
 The event will be saved until it is updated or the browser's local storage is cleared.
 
