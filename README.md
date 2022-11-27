@@ -2,7 +2,33 @@
 
 ## Description
 
-A simple online event scheduler using jQuery and Luxon to provide functionality. 
+This project is a Simple Online Event Scheduler using jQuery and Luxon to provide functionality. I built this to experiment with jQUery, Luxon, and further my knowledge on dynamic webpage generation.
+
+With Moment.js considered a legacy library, I used this opportunity to explore the Luxon.js library for processing DateTime objects. Luxon was simple to use and the documentation was easy to follow. Using an immutable DateTime objects was incredibly useful at it allowed me to use the same object repeatedly without changing its instance. I could rely on the same unchanging object wherever I needed it in the script.
+
+**User Story:**
+```
+AS AN employee with a busy schedule
+I WANT to add important events to a daily planner
+SO THAT I can manage my time effectively
+```
+
+**Acceptance Criteria:**
+```
+GIVEN I am using a daily planner to create a schedule
+WHEN I open the planner
+THEN the current day is displayed at the top of the calendar
+WHEN I scroll down
+THEN I am presented with time blocks for standard business hours
+WHEN I view the time blocks for that day
+THEN each time block is color-coded to indicate whether it is in the past, present, or future
+WHEN I click into a time block
+THEN I can enter an event
+WHEN I click the save button for that time block
+THEN the text for that event is saved in local storage
+WHEN I refresh the page
+THEN the saved events persist
+```
 
 ## Table of Contents
 
@@ -60,4 +86,3 @@ For any questions, you may contact pbp66 via email: perryjames00@gmail.com. Plea
 - Subject: Repository - Question/Issue
 - Body: Summarize the issue with a brief description for the first paragraph. Additional paragraphs can be used for a long description, if needed. Include any errors when using this project
 - Signature: Please leave an email address so that any updates sent get back to you.
-
