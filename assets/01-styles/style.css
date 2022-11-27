@@ -20,6 +20,7 @@ textarea {
 	color: #000000;
 	border-left: 1px solid black;
 	padding: 10px;
+	height: 100%;
 }
 
 ol {
@@ -89,6 +90,8 @@ ol {
 
 .event {
 	max-width: fit-content;
+	height: 100%;
+	padding: 0px;
 }
 
 .saveBtn {
