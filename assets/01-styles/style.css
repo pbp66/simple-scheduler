@@ -47,8 +47,28 @@ ol {
 	display: flex;
 	flex-flow: column nowrap;
 	align-self: center;
+	justify-items: center;
 	width: 100%;
-	margin: 25px 20px;
+	margin: 5px 20px;
+}
+
+#alert {
+	margin: 5px 15px;
+	padding: 5px 15px;
+	line-height: 1.5;
+
+	width: fit-content;
+	align-self: center;
+	text-align: center;
+
+	border: solid 5px #06AED5;
+	border-radius: 25px;
+	background-color:rgb(193, 221, 246)
+}
+
+.highlight {
+	color: rgb(183, 32, 32);
+	font-weight: bold;
 }
 
 .time-block {
@@ -112,7 +132,8 @@ ol {
 	width: 80px;
 }
 
-.saveBtn i:hover {
+.saveBtn:hover, i:hover {
 	font-size: 20px;
 	transition: all .3s ease-in-out;
+	color: black;
 }
