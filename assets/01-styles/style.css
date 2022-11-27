@@ -21,6 +21,7 @@ textarea {
 	border-left: 1px solid black;
 	padding: 10px;
 	height: 100%;
+	width: 100%;
 }
 
 ol {
@@ -52,6 +53,7 @@ ol {
 .row {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	justify-content: center;
 	white-space: pre-wrap;
 	height: 80px;
@@ -89,7 +91,6 @@ ol {
 }
 
 .event {
-	max-width: fit-content;
 	height: 100%;
 	padding: 0px;
 }
