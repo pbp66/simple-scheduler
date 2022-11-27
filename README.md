@@ -2,7 +2,7 @@
 
 ## Description
 
-A simple online event scheduler using jQuery and Luxon to provide functionality
+A simple online event scheduler using jQuery and Luxon to provide functionality. 
 
 ## Table of Contents
 
@@ -50,7 +50,7 @@ Before contributing, be sure to read the GitHub [Code of Conduct](https://github
 
 ## Tests
 
-No Tests Provided
+No Tests Provided.
 
 ## Questions
 
@@ -59,5 +59,5 @@ For any questions, you may contact pbp66 via email: perryjames00@gmail.com. Plea
 
 - Subject: Repository - Question/Issue
 - Body: Summarize the issue with a brief description for the first paragraph. Additional paragraphs can be used for a long description, if needed. Include any errors when using this project
-- Signature: Please leave an email address so that any updates are sent get back to you.
+- Signature: Please leave an email address so that any updates sent get back to you.
 
